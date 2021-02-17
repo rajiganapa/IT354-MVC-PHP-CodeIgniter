@@ -91,11 +91,14 @@
 
 </div>
 
+<!-- Below section will create the link for create tasks functions and will be routed to tasks/create_tasks view whenever
+we clicks that link-->
 
 <div class="col-xs-3 pull-right">
 <ul class="list-group">
 		
 		<h4>Project Actions</h4>
+		<li class="list-group-item"><a href="<?php echo base_url();?>tasks/create_tasks/<?php echo $project_data->id; ?>">Create Task</a></li> 
 		<li class="list-group-item"><a href="<?php echo base_url();?>projects/edit/<?php echo $project_data->id; ?>">Edit Project</a></li> 
 		<li class="list-group-item"><a href="<?php echo base_url();?>projects/delete/<?php echo $project_data->id; ?>">Delete Project</a></li> 
 

@@ -1,8 +1,9 @@
+<!-- This view page will get a call from projects display.php inorder to display the tasks webpage with all the input fields-->
 <h2>Create task</h2>
 
 <?php $attributes = array('id'=>'create_form', 'class'=> 'form_horizontal'); ?>
 <?php echo validation_errors("<p class='bg-danger'>"); ?>
-<?php echo form_open('tasks/create/'. $this->uri->segment(3).'', $attributes);?>
+<?php echo form_open('tasks/create_tasks/'. $this->uri->segment(3).'', $attributes);?>
 
 <div class="form-group">
 	
