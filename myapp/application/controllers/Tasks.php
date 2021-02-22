@@ -16,7 +16,7 @@ class Tasks extends CI_Controller
 
     //1. Below function in this controller will be routed to tasks section in view and call create_tasks view pages
     //2. After getting information from the view, the tasks webpage will be displayed
-    //3. Then it will post all the information that users enters into database table (tasks) through task_model
+    //3. Then it will post all the information that users enters into database table (tasks) through create_tasks task_model
 
     public function create_tasks($project_id)
     {
@@ -44,6 +44,9 @@ class Tasks extends CI_Controller
         }
     }
     
+    //1. Below function in this controller will be routed to tasks section in view and call edit_tasks view pages
+    //2. After getting information from the view, the edit tasks webpage will be displayed
+    //3. Then it will post all the information that users enters into database table (tasks) through edit_task task_model
 
     public function edit($task_id)
     {
@@ -75,6 +78,9 @@ class Tasks extends CI_Controller
         }
     }
 
+    //1. Below function in this controller will be routed to tasks section in view and call delete_tasks view pages
+    //2. After getting information from the view, the edit tasks webpage will be displayed
+    //3. Then it will delete the information related to the particular task by using delete_task task model
     
     public function delete($task_id)
     {

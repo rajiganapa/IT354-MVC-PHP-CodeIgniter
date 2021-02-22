@@ -76,6 +76,8 @@ class Task_model extends CI_Model {
 
 	}
 
+	//This function will get a call from the tasks.php controller to update the data into tasks table in database through edit_task model
+
 	public function edit_task($task_id, $data) {
 
 		$this->db->where('id', $task_id);
@@ -85,7 +87,8 @@ class Task_model extends CI_Model {
 
 	}
 
-	
+	//This function will get a call from the tasks.php controller to delete the tasks table data in database through model
+
 	public function delete_task($task_id) {
 
 		$this->db->where('id', $task_id);
@@ -93,7 +96,7 @@ class Task_model extends CI_Model {
 		return true;
 	}
 
-	
+
 }
 	
 	

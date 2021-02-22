@@ -27,6 +27,9 @@
 
 </div>
 </div>
+
+<!--Flashdata code for tasks session -->
+
 <p class="bg-success">
 
 <?php if($this->session->flashdata('task_created')): ?>
