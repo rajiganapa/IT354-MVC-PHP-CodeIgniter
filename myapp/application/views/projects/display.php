@@ -12,6 +12,7 @@
 
 <?php endif; ?>
 
+
 </p>
 
 <div class="panel panel-primary">
@@ -26,6 +27,29 @@
 
 </div>
 </div>
+<p class="bg-success">
+
+<?php if($this->session->flashdata('task_created')): ?>
+
+<?php echo $this->session->flashdata('task_created'); ?>
+
+<?php endif; ?>
+
+<?php if($this->session->flashdata('task_updated')): ?>
+
+<?php echo $this->session->flashdata('task_updated'); ?>
+
+<?php endif; ?>
+
+
+<?php if($this->session->flashdata('task_deleted')): ?>
+
+<?php echo $this->session->flashdata('task_deleted'); ?>
+
+<?php endif; ?>
+
+
+</p>
 
 <div class="panel panel-warning">
 	<div class="panel-heading"><h4>Active Tasks</h4></div>
