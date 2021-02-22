@@ -2,6 +2,8 @@
 
 class Task_model extends CI_Model {
 
+	
+
 	public function get_task($task_id) {
 		$this->db->where('id', $task_id);
 		$query = $this->db->get('tasks');
@@ -41,12 +43,7 @@ class Task_model extends CI_Model {
 
 	}
 
-	public function delete_task($task_id) {
-
-		$this->db->where('id', $task_id);
-		$this->db->delete('tasks');
-
-	}
+	
 
 	public function mark_task_complete($task_id) {
 
@@ -67,7 +64,41 @@ class Task_model extends CI_Model {
 		return true;
 
 	}
-}
 
+	//This function will get a call from the tasks.php controller to insert the data into tasks table in database through model
+	
+	public function create_task($data) {
+
+		$insert_query = $this->db->insert('tasks', $data);
+
+		return $insert_query;
+
+
+	}
+
+	//This function will get a call from the tasks.php controller to update the data into tasks table in database through edit_task model
+
+	public function edit_task($task_id, $data) {
+
+		$this->db->where('id', $task_id);
+		$this->db->update('tasks', $data);
+
+		return true;
+
+	}
+
+	//This function will get a call from the tasks.php controller to delete the tasks table data in database through model
+
+	public function delete_task($task_id) {
+
+		$this->db->where('id', $task_id);
+		$this->db->delete('tasks');
+		return true;
+	}
+
+
+}
+	
+	
 
  ?>

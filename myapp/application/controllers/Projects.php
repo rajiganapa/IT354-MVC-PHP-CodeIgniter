@@ -85,6 +85,8 @@ class Projects extends CI_Controller
         }
     }
 
+    
+
     public function delete($project_id)
     {
         $this->project_model->delete_project_tasks($project_id);
