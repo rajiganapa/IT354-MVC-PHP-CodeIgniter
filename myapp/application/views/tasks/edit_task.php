@@ -1,7 +1,7 @@
 <h2>Edit task</h2>
 <?php $attributes = array('id'=>'edit_task_form', 'class'=> 'form_horizontal'); ?>
 <?php echo validation_errors("<p class='bg-danger'>"); ?>
-<?php echo form_open('tasks/edit/'. $this->uri->segment(3).'', $attributes);?>
+<?php echo form_open('tasks/edit/'. $this->uri->segment(3).'/'. $this->uri->segment(4).'', $attributes);?>
 
 <div class="form-group">
 	
